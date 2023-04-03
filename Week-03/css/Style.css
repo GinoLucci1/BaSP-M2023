@@ -1,12 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    } 
+
+    body {
+        margin: 0;
+        background-color: white
+    }
+
 header {
     background-color: #373867;
     position: fixed;
+    text-align: center;
+    bottom: 50px;
     width: 100%;
     height: 119px;
-    align-items: center;
     top: 0;
     left: 0;
     color: white;
+
 
 }
 
@@ -14,13 +28,17 @@ h1 {
     color: #373867;
 }
 
+.box-1 {
+    right: 30px;
+}
+
 .sidebar {
 	background-color: #f2f2f2;
-	padding: 20px;
+	padding: 30px;
 	width: 200px;
     height: 100vh;
     position: fixed;
-    top: 118px;
+    top: 120px;
 }
 
 .sidebar h2 {
@@ -29,11 +47,11 @@ h1 {
 
 .sidebar ul {
 	list-style: none;
-	padding: 0;
+	padding: 10;
 }
 
 .sidebar li {
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 .sidebar a {
@@ -41,9 +59,16 @@ h1 {
 	text-decoration: none;
 }
 
+button {
+    background-color: #AACE9B;
+    border-color: grey;
+    
+}
+
 .main {
 	flex-grow: 1;
 	padding: 20px;
+    margin-top: 150px;
 }
 
 .main h1 {
@@ -58,7 +83,7 @@ a {
     text-align: center;
 }
 
-h3 {
+.titles {
     text-align: center;
     color: #373867;
 }
@@ -80,4 +105,27 @@ form {
 #submit {
     background-color:#AACE9B ;
 
+}
+
+article {
+    display: inline-block;
+    width: 50%;
+}
+
+#black {
+    background-color: #333;
+    color: white;
+}
+
+#grey {
+    background-color:#CCCBCB;
+    ;
+}
+
+#white {
+    background-color: #EDEDED;
+}
+
+footer {
+    text-align: center;
 }
