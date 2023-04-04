@@ -25,3 +25,4 @@ All frames done
 ```
 02/04 update html, bug fix, changes styles
 ```
+03/04 big changes, i finish the problem i guess, but, thanks for guys and tutors, i safe the week c:
