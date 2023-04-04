@@ -37,6 +37,22 @@ h1 {
     color: #423C3C
 }
 
+#search {
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 36px;
+    width: 255px;
+    left: 40px;
+    top: 16px;
+    border-radius: 4px;
+    border: 0;
+}
+
+#search2 {
+    position: relative;
+    right: 30px;
+}
+
 .sidebar {
     background-color: #f2f2f2;
     width: 335px;
@@ -45,6 +61,7 @@ h1 {
     top: 120px;
     left: 0;
 }
+
 
 .info {
     max-width: 90%;
@@ -55,6 +72,7 @@ h1 {
     left: 67px;
     top: 0px;
 }
+
 
 #infor {
     text-align: center;
@@ -102,6 +120,7 @@ button {
     left: 67px;
     top: 0px;
     border-radius: 10px;
+    font-weight: 700;
 }
 
 main {
