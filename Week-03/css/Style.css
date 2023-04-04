@@ -1,96 +1,242 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
     font-family: 'Roboto', sans-serif;
-    } 
-
-    body {
-        margin: 0;
-        background-color: white
-    }
+}
 
 header {
     background-color: #373867;
     position: fixed;
     text-align: center;
-    bottom: 50px;
     width: 100%;
     height: 119px;
     top: 0;
     left: 0;
     color: white;
 
+}
 
+#mega {
+    bottom: 30px;
+    position: absolute;
+    left: 1000px;
 }
 
 h1 {
     color: #373867;
 }
 
-.box-1 {
-    right: 30px;
+.lorem {
+    color: #776262;
+    background-color: rgba(170, 206, 155, 0.25);
+    text-align: center;
+    font-style: normal;
+    line-height: 70px;
+    margin: 100px;
+}
+
+#temple {
+    color: #423C3C
 }
 
 .sidebar {
-	background-color: #f2f2f2;
-	padding: 30px;
-	width: 200px;
-    height: 100vh;
+    background-color: #f2f2f2;
+    width: 335px;
+    height: 100%;
     position: fixed;
     top: 120px;
+    left: 0;
 }
 
-.sidebar h2 {
-	margin-top: 0;
+.info {
+    max-width: 90%;
+    margin-bottom: 5px;
+    display: inline-block;
+    height: 49px;
+    width: 238px;
+    left: 67px;
+    top: 0px;
+}
+
+#infor {
+    text-align: center;
+    margin-top: 60%;
+}
+
+.icons {
+    margin-top:0px;
+    width: 30px;
+    height: 30px;
 }
 
 .sidebar ul {
-	list-style: none;
-	padding: 10;
-}
-
-.sidebar li {
-	margin-bottom: 20px;
+    list-style: none;
+    padding: 10;
 }
 
 .sidebar a {
-	color: #333;
-	text-decoration: none;
+    color: #333;
+    text-decoration: none;
+}
+
+.menu {
+    display: inline-block;
+    margin: 10px 0px;
+}
+
+.menu img {
+    width: 30px;
+    height: 25px;
+}
+
+#radium {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
 }
 
 button {
     background-color: #AACE9B;
-    border-color: grey;
-    
+    border: #373867;
+    font-size: 20%;
+    height: 49px;
+    width: 238px;
+    left: 67px;
+    top: 0px;
+    border-radius: 10px;
 }
 
-.main {
-	flex-grow: 1;
-	padding: 20px;
+main {
+    text-align: center;
     margin-top: 150px;
+    margin-left: 335px;
 }
 
 .main h1 {
-	margin-top: 0;
+    margin-top: 0;
 }
 
-p {
+.management {
+
+    width: 194px;
+    height: 16px;
+    left: 1021px;
+    top: 1272px;
+    font-weight: 700;
+}
+
+.img2 {
+    width: 214px;
+    height: 211px;
+    top: 1060px;
+    left: 1100px;
+}
+
+.time {
+    display: inline-block;
+    width: 220px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 100px;
+    margin-bottom: 75px;
+}
+
+.descrip {
+    margin-top: 50px;
+}
+
+.sports {
+    font-weight: 700;
+    padding-left: 180px;
+}
+
+.horarios {
+    display: inline-block;
+    width: 30%;
+}
+
+.section-registration h2 {
+    margin: 40px 0;
+    font-size: 40px;
+    color: rgba(55, 56, 103, 1);
+}
+
+#name,
+#lastname,
+#email {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background-color: rgba(186, 184, 184, 1);
+    height: 30px;
+    border-radius: 5px;
+    width: 330px;
+    border: none;
+    display: inline-block;
     text-align: center;
 }
 
-a {
-    text-align: center;
+.section-registration table {
+    margin: 20px 0;
+    display: inline-block;
+}
+
+.section-registration h5 {
+    text-align: start;
+    font-size: 13px;
+}
+
+.section-registration h4 {
+    font-size: 14px;
+}
+
+.section-registration textarea {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background-color: #eceaea;
+    box-shadow: 50%;
+    min-height: 80px;
+    max-height: 150px;
+    border-radius: 5px;
+    border: none;
+    display: inline-block;
+    text-align: start;
+    min-width: 330px;
+    max-width: 330px;
+}
+
+.section-registration button {
+    width: 110px;
+    height: 30px;
+    border: none;
+    background-color: rgba(170, 206, 155, 1);
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.activity {
+    display: inline-block;
+    width: 30%;
+    margin: 20px 30px;
+}
+
+.gym2 {
+    height: 300px;
+    width: 400px;
+}
+
+.box-02 {
+    text-align: left;
+    margin-left: 200px;
 }
 
 .titles {
+    margin-top: 100px;
     text-align: center;
     color: #373867;
 }
 
 section {
     text-align: center;
-    padding: 100px;
+    padding: 0px;
 }
 
 h4 {
@@ -99,33 +245,69 @@ h4 {
 
 form {
     text-align: center;
-
 }
 
 #submit {
-    background-color:#AACE9B ;
-
+    height: 33px;
+    width: 109px;
+    border-radius: 5px;
+    background-color: #AACE9B;
 }
 
 article {
     display: inline-block;
     width: 50%;
+    text-align: center;
+    right: 50px;
 }
 
 #black {
     background-color: #333;
     color: white;
+    position: relative;
+    left: 280px;
+    height: 40px;
+    width: 311px;
+    border-radius: 5px;
 }
 
 #grey {
-    background-color:#CCCBCB;
-    ;
+    background-color: #CCCBCB;
+    align-items: center;
+    position: relative;
+    left: 280px;
+    height: 40px;
+    width: 311px;
+    border-radius: 5px;
+    right: 20px;
 }
 
 #white {
     background-color: #EDEDED;
+    position: relative;
+    left: 280px;
+    height: 40px;
+    width: 311px;
+    border-radius: 5px;
+
 }
 
+.icon {
+    color: black;
+    width:15px;
+    height:14px;
+    text-decoration: none;
+}
+
+.icon:visited {
+    color: black;
+    text-decoration: none;
+}
+footer a {
+    text-decoration: none;
+    color: black;
+}
 footer {
     text-align: center;
+    margin-left: 15%;
 }
