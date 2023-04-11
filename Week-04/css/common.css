@@ -59,13 +59,13 @@ textarea {
 
 #grey {
     background-color: rgba(204, 203, 203, 1);
-    color:rgba(0, 0, 0, 1);
+    color: rgba(0, 0, 0, 1);
     display: flex;
     align-items: center;
     justify-content: center;
     height: 38px;
     width: 290px;
-border-radius: 5px;
+    border-radius: 5px;
 }
 
 #white {

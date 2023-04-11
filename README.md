@@ -39,6 +39,8 @@ css flexbox
 
 11/04 finished mobile version, it remains to fix positions on desktop/tablet
 
+11/04 20:00pm end the problem weekly, fix the positions in all versions
+
 ## Author
 
     Gino Lucci
