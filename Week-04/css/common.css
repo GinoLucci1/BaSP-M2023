@@ -2,6 +2,14 @@ html {
     font-family: 'Roboto', sans-serif;
 }
 
+.titles {
+    text-align: center;
+    color: #373867;
+}
+
+#temple {
+    text-align: center;
+}
 
 h1 {
     color: #373867;
@@ -41,25 +49,38 @@ textarea {
 #black {
     background-color: rgba(42, 42, 50, 1);
     color: white;
-    height: 35px;
-    width: 221px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    width: 290px;
     border-radius: 5px;
 }
 
 #grey {
     background-color: rgba(204, 203, 203, 1);
     color:rgba(0, 0, 0, 1);
-    height: 40px;
-width: 221px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    width: 290px;
 border-radius: 5px;
 }
 
 #white {
     background-color: rgba(237, 237, 237, 1);
     color: rgba(0, 0, 0, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 38px;
-    width: 251px;
+    width: 290px;
     border-radius: 5px;
+}
+
+.sports {
+    font-weight: 600;
 }
 
 @media screen and (min-width: 1024px) {

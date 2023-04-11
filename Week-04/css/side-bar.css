@@ -59,8 +59,13 @@
     height: 25px;
 }
 
-.sidebar {display: none;}
-.container {display: none;}
+.sidebar { 
+    display: none;
+}
+
+.container {
+    display: none;
+}
 
 button {
     background-color: #AACE9B;

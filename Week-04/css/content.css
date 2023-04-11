@@ -1,8 +1,3 @@
-#radium {
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-}
 
 #icon-hamburguer {
     position: fixed;
@@ -26,9 +21,6 @@ body {
     width: 70%;
 }
 
-.info-box-container {
-    
-}
 
 .info-box-container p {
     display: none;
@@ -41,8 +33,11 @@ body {
 }
 .box-02 {
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    align-items: center;
+    margin:0 auto;
+    max-width: 950px;
+    flex-wrap: wrap;
+    justify-content: space-between
 }
 
 #box-management {
@@ -115,6 +110,16 @@ body {
     margin-top: 20px;
 }
 
+.section-time {
+    margin-left: 20px;
+}
+
+.section-time2 {
+    margin: 50px;
+}
+
+
+
 #coment {
     border-style: solid;
     border-width: 2px;
@@ -124,20 +129,50 @@ body {
     background: rgba(170, 206, 155, 0.1);
 }
 
-.member {
+.member1 {
     display: flex;
     flex-direction: column;
-    width: 100%;
-
+    justify-content: center;
+    align-items: center;
 }
 
 .gym2 {
-    width: 70%;
-    height: 70%;
+    Width:233px ;
+    Height: 181px;
     object-fit: contain;
+}
+
+.logo img {
+    width: 90px !important;
 }
 .activity {
     
+}
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    }
+.footer-item p{
+    width: 700px !important;
+    }
+
+.footer-icons {
+    display: flex;
+    gap: 10px;
+    }
+
+#registration {
+    text-align: center;
+}
+
+@media screen and  (min-width: 600px){
+    #gym-picture {
+        order: 1;
+    }
 }
 
 @media  (max-width: 300px) {
@@ -149,8 +184,24 @@ body {
 @media screen and (min-width:1024px) {
     .section-time {
         display: flex;
+        justify-content: space-around;
     }
     .section-time2 {
         display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .activity {
+        display: flex;
+    }
+}
+
+@media screen and (min-width:600px) {
+    #radium {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
     }
 }
