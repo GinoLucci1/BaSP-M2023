@@ -29,6 +29,10 @@ All frames done
 
 04/04 end the problem, add the search in aside bar, accommodate text and images
 
+```
+css flexbox 
+```
+
 09/04 start the problem with css flexbox
 
 10/04 continue the problem continue the problem with the help of classmates and tutors
