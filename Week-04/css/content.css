@@ -34,6 +34,7 @@ body {
 .box-02 {
     display: flex;
     align-items: center;
+    vertical-align: middle;
     margin:0 auto;
     max-width: 950px;
     flex-wrap: wrap;
@@ -157,7 +158,7 @@ body {
     align-items: center;
     }
 .footer-item p{
-    width: 700px !important;
+    display: flex;
     }
 
 .footer-icons {
