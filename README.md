@@ -41,6 +41,15 @@ css flexbox
 
 11/04 20:00pm end the problem weekly, fix the positions in all versions
 
+```
+javascript exercises
+```
+15/04 start the exercises, 01-Variables and operators
+
+16/04 continue the exercises, 02-03-04 finished
+
+17/04 end the exercises, 05-06, commit and push done
+
 ## Author
 
     Gino Lucci
