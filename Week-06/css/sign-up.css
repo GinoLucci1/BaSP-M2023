@@ -1,0 +1,116 @@
+/*HEADER*/
+header {
+    z-index: 1;
+    background-color: rgba(55, 56, 103, 1);
+    height: 150px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header p {
+    width: 500px !important;
+    text-align: center;
+    font-size: 40px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 1);
+    font-weight: bold;
+}
+
+/*MAIN*/
+a h6 {
+    color: rgb(92, 92, 92);
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(92, 92, 92);
+}
+
+main {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+}
+
+.sign-up-container {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(238, 238, 238);
+    border: 1px solid black;
+    border-radius: 10px;
+    gap: 50px;
+    justify-content: center;
+    height: fit-content;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 40px;
+    font-size: 26px;
+    color: rgba(55, 56, 103, 1);
+    text-align: center;
+}
+
+main input {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background-color: rgb(223, 219, 219);
+    height: 30px;
+    border-radius: 5px;
+    width: 200px;
+    border: none;
+    text-align: center;
+}
+
+.Column-Container h4 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#Password-remember {
+    width: 15px;
+}
+
+.sign-up-sub-item h6 {
+    margin-left: 5px;
+}
+
+button {
+    width: 150px;
+    height: 40px;
+    border: none;
+    background-color: rgba(170, 206, 155, 1);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+button a {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 1);
+}
+
+#h6-new-user {
+    margin-top: 15px;
+}
+
+@media only screen and (max-width: 625px) {
+    .sign-up-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        width: 300px;
+    }
+}

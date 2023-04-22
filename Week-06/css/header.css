@@ -1,0 +1,17 @@
+#mega {
+    background-color: rgba(55, 56, 103, 1);
+    color: white;
+    text-align: center;
+    Width: 100%;
+    min-height: 100px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:600px) {
+    header {
+        display: none;
+    }
+}

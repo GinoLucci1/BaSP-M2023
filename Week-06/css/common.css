@@ -1,0 +1,97 @@
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+.titles {
+    text-align: center;
+    color: #373867;
+}
+
+#temple {
+    text-align: center;
+}
+
+h1 {
+    color: #373867;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+main {
+    padding: 0% 5%;
+    margin-top: 100px;
+}
+
+textarea {
+    background-color: aliceblue;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+#box.all {
+    display: flex;
+}
+
+#black {
+    background-color: rgba(42, 42, 50, 1);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    width: 290px;
+    border-radius: 5px;
+}
+
+#grey {
+    background-color: rgba(204, 203, 203, 1);
+    color: rgba(0, 0, 0, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    width: 290px;
+    border-radius: 5px;
+}
+
+#white {
+    background-color: rgba(237, 237, 237, 1);
+    color: rgba(0, 0, 0, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    width: 290px;
+    border-radius: 5px;
+}
+
+.sports {
+    font-weight: 600;
+}
+
+@media screen and (min-width: 1024px) {
+    main {
+        margin-top: 100px;
+        margin-left: 400px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        text-align: center;
+    }
+}
