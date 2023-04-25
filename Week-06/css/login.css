@@ -10,26 +10,26 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  header p{
+    }
+    header p{
     width: 500px !important;
     text-align: center;
     font-size: 40px;
     margin: 0 auto;
     color: rgba(255, 255, 255,1);
     font-weight: bold;
-  }
+    }
 
-  /*MAIN*/
-  a h6{
+    /*MAIN*/
+    a h6{
     color: rgb(92, 92, 92);
     margin-top: 20px;
     margin-left: 20px;
-  }
-  a{
+    } 
+    a{
     text-decoration: none;
     color: rgb(92, 92, 92);
-  }
+    }
 main{
     margin-top: 50px;
     text-align: center;
@@ -46,7 +46,7 @@ h2{
     font-size: 26px;
     color: rgba(55, 56, 103,1);
     text-align: center;
-  }
+    }
 main input{
     margin-top: 5px;
     margin-bottom: 10px;
