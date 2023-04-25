@@ -12,6 +12,11 @@ header {
     justify-content: center;
 }
 
+.errorP {
+    background-color: red;
+    color: white;
+}
+
 header p {
     width: 500px !important;
     text-align: center;

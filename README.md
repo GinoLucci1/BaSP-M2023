@@ -50,6 +50,10 @@ javascript exercises
 
 17/04 end the exercises, 05-06, commit and push done
 
+```
+
+```
+
 ## Author
 
     Gino Lucci
