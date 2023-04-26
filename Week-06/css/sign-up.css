@@ -17,6 +17,23 @@ header {
     color: white;
 }
 
+.border-initial{
+    border: 1px solid #373867;
+}
+
+.border-error{
+    border: red 2px solid;
+}
+
+.border-correct{
+    border: green 2px solid;
+}
+
+.font-error{
+    color: red;
+    font-size: 13px;
+    visibility: visible;
+}
 header p {
     width: 500px !important;
     text-align: center;

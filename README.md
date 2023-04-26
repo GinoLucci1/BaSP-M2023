@@ -51,8 +51,13 @@ javascript exercises
 17/04 end the exercises, 05-06, commit and push done
 
 ```
-
+html/css/javascript login and register
 ```
+23/04 start the problem with html and css 
+
+24/04 end the "styles" and continue with js
+
+25/04 finish all the problem but i missed some things to make the problem better 
 
 ## Author
 
