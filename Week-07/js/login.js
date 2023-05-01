@@ -1,16 +1,14 @@
-                                /* --> WEEK 06 <-- */
 window.onload = function(){
     var inputValue = [];
     
     // Email Validation
     var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-    var inputEmail = document.getElementById('email');
-    var inputE = document.querySelector('input[name ="email"');
+    var inputEmail = document.getElementById('input-email');
     var inputEmailError = document.createElement('p');
     inputEmailError.classList.add("font-error");
-    inputE.onblur = function(){
+    
+    inputEmail.onblur = function(){
         if (inputEmail.value == ''){
-            console.log ('hola');
             inputEmail.classList.add("border-error");
             inputEmailError.textContent = '*Insert an email';
             inputEmail.insertAdjacentElement('afterend', inputEmailError);
@@ -31,7 +29,7 @@ window.onload = function(){
     }
     
     // Password Validation
-    var inputPassword = document.getElementById('password');
+    var inputPassword = document.getElementById('input-password');
     var inputPasswordError = document.createElement('p');
     inputPasswordError.classList.add('font-error');
     
@@ -44,15 +42,15 @@ window.onload = function(){
             inputPassword.classList.add("border-error");
             inputPasswordError.textContent = '*The password must be 8 characters long';
             inputPassword.insertAdjacentElement('afterend', inputPasswordError);
-        } else if(!NumberCheck(inputPassword.value)){
+        } else if(!numberCheck(inputPassword.value)){
             inputPassword.classList.add("border-error");
             inputPasswordError.textContent = '*The password must contain at least one number';
             inputPassword.insertAdjacentElement('afterend', inputPasswordError);
-        } else if (!LetterCheck(inputPassword.value)){
+        } else if (!letterCheck(inputPassword.value)){
             inputPassword.classList.add("border-error");
             inputPasswordError.textContent = '*The password must contain at least one letter';
             inputPassword.insertAdjacentElement('afterend', inputPasswordError);
-        } else if ((LetterCheck(inputPassword.value)) && (NumberCheck(inputPassword.value))){
+        } else if ((letterCheck(inputPassword.value)) && (numberCheck(inputPassword.value))){
             inputPassword.classList.add("border-correct");
             inputValue[1] = inputPassword.value;
         };
@@ -65,7 +63,7 @@ window.onload = function(){
     };
     
     // function Letter validation
-    function LetterCheck(letterString){
+    function letterCheck(letterString){
         var ascii =  ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
         'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
         'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
@@ -78,7 +76,7 @@ window.onload = function(){
     };
     
     // function Number validation
-    function NumberCheck(numberString){
+    function numberCheck(numberString){
         var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
         for(i = 0; i < numberString.length; i++){
             if (numbers.includes(numberString[i])){
@@ -94,9 +92,10 @@ window.onload = function(){
             e.preventDefault();
             if(inputValue.includes(inputEmail.value) &&
             inputValue.includes(inputPassword.value)){
-                alert('Email: ' + inputValue[0] + '\n' + 'Password: ' + inputValue[1] );
+                alert('Local Response: \n' + 'Email: ' + inputValue[0] + '\n' + 'Password: ' + inputValue[1] );
+                return promise();
             }
-            else if (InputValue.length == 0 ){
+            else if (inputValue.length == 0 ){
                 alert('Error! Fields are empty or must be completed correctly. Try again');
                 inputEmail.onblur();
                 inputPassword.onblur();
@@ -109,33 +108,24 @@ window.onload = function(){
                 alert('ERROR! Try again');
             };
         };
+    
+    
+    function promise(){
+        var email = inputEmail.value;
+        var password = inputPassword.value;
+        fetch(`https://api-rest-server.vercel.app/login?email=${emailInput.value}&password=${passwordInput.value}` + email + '&password=' + password)
+            .then(function(response){
+                    return response.json()
+            })
+            .then(function (data){
+                if(data.success){
+                    alert('Server Response: \n' + 'Login Success: ' + data.success + '\n' + 'Message: ' + data.msg);
+                } else {
+                    throw data;
+                }
+            })
+            .catch(function(error){
+                alert('Server Response: ERROR! \n' + 'Login Success: ' + error.success + '\n' + 'Message: ' + error.msg);
+            })
+        };
     };
-
-                            /* --> WEEK 07 <-- */
-    var button = document.getElementById("login");
-    button.addEventListener("click", function(event) {
-        var url = 'https://api-rest-server.vercel.app/login?email=${emailInput.value}&password=${passwordInput.value'
-    event.preventDefault();
-    if (
-        validateEmail(emailInput.value) &&
-        hasNumberAndChar(passwordInput.value)
-    ) {
-        fetch(url)
-        .then (function (response) {
-            return response.json ();
-        })
-        .then (function(data) {
-            alert(data.msg);
-        })
-        .catch(function(error) {
-            alert(data.msg);
-        });
-    } else {
-        if (!validateEmail(emailInput.value)) {
-            alert("ERROR =" + emailInput.value);
-        }
-        if (!hasNumberAndChar(passwordInput.value)) {
-            alert("ERROR =" + passwordInput.value);
-            }
-        }
-    })
