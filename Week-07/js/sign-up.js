@@ -462,5 +462,59 @@ window.onload = function(){
     };
 
                     /* --> WEEK 07 <-- */
+function getLocalStorage(){
+    inputName.value = localStorage.getItem('Name');
+    inputSurname.value = localStorage.getItem('Last Name');
+    inputEmail.value = localStorage.getItem('Email');
+    inputPhone.value = localStorage.getItem('Phone');
+    inputPassword.value = localStorage.getItem('Password');
+    inputConfirmPassword.value = localStorage.getItem('Password');
+    inputBirthDate.value = birthDateDMY(localStorage.getItem('Birth Date'));
+    inputDNI.value = localStorage.getItem('DNI');
+    inputCity.value = localStorage.getItem('City');
+    inputAddress.value = localStorage.getItem('Address');
+    inputPostal.value = localStorage.getItem('Postal Code');
+}
 
+if (localStorage.length != 0){
+    getLocalStorage()
+};
+
+function promiseSignUp(queryParams){
+    var queryParams = 'name=' + inputName.value +
+    '&lastName=' + inputSurname.value +
+    '&email=' + inputEmail.value +
+    '&phone=' + inputPhone.value +
+    '&password=' + inputPassword.value +
+    '&dob=' + birthDateMDY(inputBirthDate.value) +
+    '&dni=' + inputDNI.value +
+    '&city=' + inputCity.value +
+    '&address=' + inputAddress.value +
+    '&zip=' + inputPostal.value;
+    fetch(`https://api-rest-server.vercel.app/login?email=${emailInput.value}&password=${passwordInput.value}` + queryParams)
+    .then(function(response){
+            return response.json();
+    })
+    .then(function(data){
+        if(data.success){
+            alert('Server Response: \n' + 'Success: ' + data.success + '\n' + 'Message: ' + data.msg)
+            localStorage.setItem('Name', data.data.name);
+            localStorage.setItem('Last Name', data.data.lastName);
+            localStorage.setItem('Email' , data.data.email);
+            localStorage.setItem('Phone', data.data.phone);
+            localStorage.setItem('Password', data.data.password);
+            localStorage.setItem('Confirm Password', data.data.password);
+            localStorage.setItem('Birth Date', data.data.dob);
+            localStorage.setItem('DNI', data.data.dni);
+            localStorage.setItem('City', data.data.city);
+            localStorage.setItem('Address', data.data.address);
+            localStorage.setItem('Postal Code', data.data.zip);
+        } else {
+            throw data;
+        }
+    })
+    .catch(function(error){
+        alert('Server Response: ERROR! \n' + 'Success: ' + error.success + '\n' + 'Message: ' + error.msg);
+    })
+};
 

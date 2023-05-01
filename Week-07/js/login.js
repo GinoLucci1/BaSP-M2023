@@ -3,7 +3,7 @@ window.onload = function(){
     
     // Email Validation
     var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-    var inputEmail = document.getElementById('input-email');
+    var inputEmail = document.getElementById('email');
     var inputEmailError = document.createElement('p');
     inputEmailError.classList.add("font-error");
     
@@ -29,7 +29,7 @@ window.onload = function(){
     }
     
     // Password Validation
-    var inputPassword = document.getElementById('input-password');
+    var inputPassword = document.getElementById('password');
     var inputPasswordError = document.createElement('p');
     inputPasswordError.classList.add('font-error');
     
@@ -108,7 +108,6 @@ window.onload = function(){
                 alert('ERROR! Try again');
             };
         };
-    
     
     function promise(){
         var email = inputEmail.value;
