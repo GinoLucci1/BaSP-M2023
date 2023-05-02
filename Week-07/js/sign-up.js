@@ -402,9 +402,32 @@ window.onload = function () {
     };
 
 
-    // Create Button Validation
+    // Create Button Validation-
     var CreateButton = document.getElementById('signUp');
     CreateButton.onclick = function (e) {
+        urlsign = "https://api-rest-server.vercel.app/signup?" +
+    "name=" +
+    InputName.value +
+    "&lastName=" +
+    InputSurname.value +
+    "&dni=" +
+    InputDNI.value +
+    "&dob=" +
+    InputBirthDate.value +
+    "&phone=" +
+    InputPhone.value +
+    "&address=" +
+    InputAddress.value +
+    "&zip=" +
+    InputPostal.value +
+    "&city=" +
+    InputCity.value +
+    "&email=" +
+    InputEmail.value +
+    "&password=" +
+    InputPassword.value +
+    "&password=" +
+    InputConfirmPassword.value;
         e.preventDefault();
         if (InputValue.includes(InputName.value) &&
             InputValue.includes(InputSurname.value) &&
@@ -417,7 +440,32 @@ window.onload = function () {
             InputValue.includes(InputCity.value) &&
             InputValue.includes(InputAddress.value) &&
             InputValue.includes(InputPostal.value)) {
-            alert(
+                fetch (urlsign)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    if (data.success) {
+                        alert('Server Response: \n' + 'Success: ' + data.success + '\n' + 'Message: ' + data.msg)
+                        localStorage.setItem('name', InputName.value);
+                        localStorage.setItem('lastname', InputSurName.value);
+                        localStorage.setItem('email', InputEmail.value);
+                        localStorage.setItem('phone', InputPhone.value);
+                        localStorage.setItem('password', InputPassword.value);
+                        localStorage.setItem('confirmPassword', InputConfirmPassword.value);
+                        localStorage.setItem('birthdate', InputBirthDate.value);
+                        localStorage.setItem('dni', InputDNI.value);
+                        localStorage.setItem('city', InputCity.value);
+                        localStorage.setItem('address', InputAddress.value);
+                        localStorage.setItem('postalcode', InputPostal.value);
+                    } else {
+                        throw data;
+                    }
+                })
+                .catch(function (error) {
+                    alert('Server Response: ERROR! \n' + 'Success: ' + error.success + '\n' + 'Message: ' + error.msg);
+                })
+                alert(
                 'Account Created Successfully' + '\n' +
                 'Name: ' + InputValue[0] + '\n' +
                 'Surname: ' + InputValue[1] + '\n' +
@@ -459,28 +507,28 @@ window.onload = function () {
             InputPostal.onblur();
         };
     };
-};
 
 /* --> WEEK 07 <-- */
 function getLocalStorage() {
-    inputName.value = localStorage.getItem('name');
-    inputSurname.value = localStorage.getItem('lastname');
-    inputEmail.value = localStorage.getItem('email');
-    inputPhone.value = localStorage.getItem('phone');
-    inputPassword.value = localStorage.getItem('password');
-    inputConfirmPassword.value = localStorage.getItem('password');
-    inputBirthDate.value = birthDateDMY(localStorage.getItem('birthdate'));
-    inputDNI.value = localStorage.getItem('dni');
-    inputCity.value = localStorage.getItem('city');
-    inputAddress.value = localStorage.getItem('address');
-    inputPostal.value = localStorage.getItem('postalcode');
+    InputName.value = localStorage.getItem('name');
+    InputSurname.value = localStorage.getItem('lastname');
+    InputEmail.value = localStorage.getItem('email');
+    InputPhone.value = localStorage.getItem('phone');
+    InputPassword.value = localStorage.getItem('password');
+    InputConfirmPassword.value = localStorage.getItem('password');
+    InputBirthDate.value = birthDateDMY(localStorage.getItem('birthdate'));
+    InputDNI.value = localStorage.getItem('dni');
+    InputCity.value = localStorage.getItem('city');
+    InputAddress.value = localStorage.getItem('address');
+    InputPostal.value = localStorage.getItem('postalcode');
 }
 
 if (localStorage.length != 0) {
     getLocalStorage()
 };
 
-function promiseSignUp(queryParams) {
+/*  + queryParams */
+/* function promiseSignUp(queryParams) {
     var queryParams = 'name=' + inputName.value +
         '&lastName=' + inputSurname.value +
         '&email=' + inputEmail.value +
@@ -490,54 +538,7 @@ function promiseSignUp(queryParams) {
         '&dni=' + inputDNI.value +
         '&city=' + inputCity.value +
         '&address=' + inputAddress.value +
-        '&zip=' + inputPostal.value;
-    fetch(`"https://api-rest-server.vercel.app/signup?" +
-    "name=" +
-    nameI.value +
-    "&lastName=" +
-    lastnameI.value +
-    "&dni=" +
-    dniInput.value +
-    "&dob=" +
-    changeDateFormat(bTdate.value) +
-    "&phone=" +
-    phoneN.value +
-    "&address=" +
-    addressN.value +
-    "&zip=" +
-    postalC.value +
-    "&city=" +
-    cityT.value +
-    "&email=" +
-    emailInput.value +
-    "&password=" +
-    passwordInput.value +
-    "&password=" +
-    passwordR.value;
-` + queryParams)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            if (data.success) {
-                alert('Server Response: \n' + 'Success: ' + data.success + '\n' + 'Message: ' + data.msg)
-                localStorage.setItem('name', data.data.name);
-                localStorage.setItem('lastname', data.data.lastName);
-                localStorage.setItem('email', data.data.email);
-                localStorage.setItem('phone', data.data.phone);
-                localStorage.setItem('password', data.data.password);
-                localStorage.setItem('confirmPassword', data.data.password);
-                localStorage.setItem('birthdate', data.data.dob);
-                localStorage.setItem('dni', data.data.dni);
-                localStorage.setItem('city', data.data.city);
-                localStorage.setItem('address', data.data.address);
-                localStorage.setItem('postalcode', data.data.zip);
-            } else {
-                throw data;
-            }
-        })
-        .catch(function (error) {
-            alert('Server Response: ERROR! \n' + 'Success: ' + error.success + '\n' + 'Message: ' + error.msg);
-        })
+        '&zip=' + inputPostal.value; */
+        
 };
 
