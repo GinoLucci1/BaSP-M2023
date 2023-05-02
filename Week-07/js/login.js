@@ -112,7 +112,8 @@ window.onload = function(){
     function promise(){
         var email = inputEmail.value;
         var password = inputPassword.value;
-        fetch(`https://api-rest-server.vercel.app/login?email=${emailInput.value}&password=${passwordInput.value}` + email + '&password=' + password)
+        var url = `https://api-rest-server.vercel.app/login?email=${inputEmail.value}&password=${inputPassword.value}`;
+        fetch (url)
             .then(function(response){
                     return response.json()
             })
