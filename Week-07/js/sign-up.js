@@ -405,7 +405,8 @@ window.onload = function () {
     // Create Button Validation-
     var CreateButton = document.getElementById('signUp');
     CreateButton.onclick = function (e) {
-        urlsign = "https://api-rest-server.vercel.app/signup?" +
+    var dob = InputBirthDate.value.substring(5, 7) + '/' + InputBirthDate.value.substring(8, 10) + '/' + InputBirthDate.value.substring(0, 4);
+    var urlsign = "https://api-rest-server.vercel.app/signup?" +
     "name=" +
     InputName.value +
     "&lastName=" +
@@ -413,7 +414,7 @@ window.onload = function () {
     "&dni=" +
     InputDNI.value +
     "&dob=" +
-    InputBirthDate.value +
+    dob + 
     "&phone=" +
     InputPhone.value +
     "&address=" +
@@ -439,16 +440,19 @@ window.onload = function () {
             InputValue.includes(InputDNI.value) &&
             InputValue.includes(InputCity.value) &&
             InputValue.includes(InputAddress.value) &&
-            InputValue.includes(InputPostal.value)) {
+            InputValue.includes(InputPostal.value)) {               
                 fetch (urlsign)
                 .then(function (response) {
+                    console.log (response);
                     return response.json();
                 })
                 .then(function (data) {
+                    console.log (data);
                     if (data.success) {
                         alert('Server Response: \n' + 'Success: ' + data.success + '\n' + 'Message: ' + data.msg)
+                        console.log (InputName.value);
                         localStorage.setItem('name', InputName.value);
-                        localStorage.setItem('lastname', InputSurName.value);
+                        localStorage.setItem('lastname', InputSurname.value);
                         localStorage.setItem('email', InputEmail.value);
                         localStorage.setItem('phone', InputPhone.value);
                         localStorage.setItem('password', InputPassword.value);
@@ -459,11 +463,11 @@ window.onload = function () {
                         localStorage.setItem('address', InputAddress.value);
                         localStorage.setItem('postalcode', InputPostal.value);
                     } else {
-                        throw data;
+                        throw new Error(data.msg);
                     }
                 })
                 .catch(function (error) {
-                    alert('Server Response: ERROR! \n' + 'Success: ' + error.success + '\n' + 'Message: ' + error.msg);
+                    alert(error);
                 })
                 alert(
                 'Account Created Successfully' + '\n' +
@@ -516,7 +520,7 @@ function getLocalStorage() {
     InputPhone.value = localStorage.getItem('phone');
     InputPassword.value = localStorage.getItem('password');
     InputConfirmPassword.value = localStorage.getItem('password');
-    InputBirthDate.value = birthDateDMY(localStorage.getItem('birthdate'));
+    InputBirthDate.value = localStorage.getItem('birthdate');
     InputDNI.value = localStorage.getItem('dni');
     InputCity.value = localStorage.getItem('city');
     InputAddress.value = localStorage.getItem('address');
@@ -527,8 +531,8 @@ if (localStorage.length != 0) {
     getLocalStorage()
 };
 
-/*  + queryParams */
-/* function promiseSignUp(queryParams) {
+/* + queryParams  */
+    function promiseSignUp(queryParams) {
     var queryParams = 'name=' + inputName.value +
         '&lastName=' + inputSurname.value +
         '&email=' + inputEmail.value +
@@ -538,7 +542,7 @@ if (localStorage.length != 0) {
         '&dni=' + inputDNI.value +
         '&city=' + inputCity.value +
         '&address=' + inputAddress.value +
-        '&zip=' + inputPostal.value; */
-        
+        '&zip=' + inputPostal.value; 
+        return (queryParams);
 };
-
+}
